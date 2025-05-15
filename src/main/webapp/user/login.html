@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="nav.css">
+
+<script type="text/javascript">
+function validate_form()
+     {
+       var passw=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+      
+       var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+       var pw=document.signupform.password.value;
+       
+       var email=document.signupform.email.value;
+       if(pw.match(passw)) 
+        { }
+  else
+  { 
+  alert('Wrong...! Password....Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters');
+  return false;
+  }
+       if(cpw.match(passw)) 
+        { }
+  else
+  { 
+  alert('Wrong...! Password....Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters');
+  return false;
+  }
+        
+  if(mailformat.match(email))
+        {}
+  else
+    {
+     alert("Invalid Email ..!");
+        return false;
+     }
+}  
+</script>
+
+
+<style>
+
+body, html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-img {
+  /* The image used */
+  background-image: url("image3.jpg");
+
+  min-height: 480px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Add styles to the form container */
+.container {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  background-color: white;
+  text-decoration: none;
+}
+
+/* Full-width input fields */
+input[type=email], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=email]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit button */
+.container input[type="submit"] {
+            border: none;
+            outline: none;
+            height: 40px;
+            width: 100%;
+            background: red;
+            color: white;
+            font-size: 18px;
+            border-radius: 20px;
+        }
+        
+        .container input[type="submit"]:hover {
+            cursor: pointer;
+            background: #ffc107;
+            color: #000;
+        }
+        
+        .container a {
+            text-decoration: none;
+            font-size: 12px;
+            line-height: 20px;
+            color: darkgrey;
+        }
+        
+        .container a:hover {
+            color: #ffc107;
+        }
+        .imgcontainer img{
+    height: 100px; /* set a default height*/
+    margin-top: -7px; /* make the image rounded, this works only with square images*/
+}
+.imgcontainer{
+    display: flex; /* change display */
+    justify-content:center;/* align to the center the image */
+    /* NOTE : there is a lot of other way to align the image to the center, you can use the one that you prefer*/
+}
+</style>
+
+</head>
+<body>
+
+ <div class="topnav">
+  <a  href="#"><img src="logo.png"></a>
+</div>
+<div class="bg-img">
+  <form  name="signupform" action="login.jsp" class="container" method="get" onsubmit="return validate_form()">
+<div class="imgcontainer"><img src="usericon.png"></div>
+ 
+
+    <label for="email"><b>Email</b></label>
+    <input type="email" placeholder="Enter Email" name="email" required>
+
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password">
+     <input type="submit" name="submit" value="Login"/><br>
+                <a href="#">Forget your Password ?</a><br>
+                <a href="uregister.html">Don't have an account ?</a>
+  </form>
+</div>
+
+</body>
+</html>

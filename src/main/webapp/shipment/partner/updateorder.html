@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>track</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="project.css">
+<script type="text/javascript">
+	function validate_form()
+     {
+	var on=/^\d{9}$/;
+	var oi=document.tform.orderid.value;
+	if (on==oi) {
+
+	}
+	else{
+		alert("Please enter a valid id");
+		return false;
+	}
+}
+</script>
+<style type="text/css">
+
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.icon {
+  padding: 10px;
+  background: #FEF9E7;
+  color: black;
+  min-width: 50px;
+  text-align: center;
+}
+	.trackspace {
+            width: 500px;
+            height: 310px;
+            background:  #EBF5FB;
+            color: black;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            box-sizing: border-box;
+            padding: 70px 30px
+        }
+        
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 25%;
+            position: absolute;
+            top: -75px;
+            left: 29%
+        }
+        
+        h1 {
+            margin: 0;
+            padding: 0 0 20 px;
+            text-align: center;
+            font-size: 22px;
+        }
+        
+        .trackspace p {
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+        }
+        
+        .trackspace input {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+	 .trackspace input[type="text"],input[type="email"],
+        input[type="password"] {
+            border: none;
+            border-bottom: 1px solid black;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: black;
+            font-size: 18px;
+        }
+        
+        .trackspace input[type="submit"] {
+            border: none;
+            outline: none;
+            height: 40px;
+            background: red;
+            color: white;
+            font-size: 18px;
+            border-radius: 20px;
+        }
+        
+        .trackspace input[type="submit"]:hover {
+            cursor: pointer;
+            background: #ffc107;
+            color: #000;
+        }
+        
+</style>
+<body>
+<div class="topnav">
+  <a  href="uhome1.html"><img src="logo.png"></a>
+</div>
+	<div class="trackspace">
+
+     <form name="tform" action="updateorder.jsp" method="get" >
+	<h1>Enter Orderno</h1>
+	<input type="text" name="oid" placeholder="ORDER NO" required>
+	<input type="text" name="st" placeholder="Status" required>
+	<input type="submit" name="submit" value="submit">
+
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="project.css">
+<title>SignUp Page</title>
+<script type="text/javascript">
+function validate_form()
+     {
+       var passw=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+       var phoneno = /^\d{10}$/;
+       var fname= /^[a-zA-Z\s]+$/;
+       var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+       var pw=document.signupform.password.value;
+       var cpw=document.signupform.cpassword.value;
+       var mb=document.signupform.mobile.value;
+       var fn=document.signupform.fullname.value;
+       var email=document.signupform.email.value;
+       if(pw.match(passw)) 
+        { }
+  else
+  { 
+  alert('Wrong...! Password....Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters');
+  return false;
+  }
+       if(cpw.match(passw)) 
+        { }
+  else
+  { 
+  alert('Wrong...! Password....Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters');
+  return false;
+  }
+        
+        if(pw != cpw)
+           {
+             alert("both passwords dont match");
+             return false;
+           }
+       if(mb.match(phoneno))
+        {}
+       else
+        {
+        alert("Invalid Number ..!");
+        return false;
+        }
+       if(un.match(user))
+        {}
+       else
+        {
+        alert("Invalid UserName ..!");
+        return false;
+        }
+        if(fn.match(fname))
+        {}
+       else
+        {
+        alert("Invalid Full name ..!");
+        return false;
+        }
+        if(mailformat.match(email))
+        {}
+       else
+        {
+        alert("Invalid Email ..!");
+        return false;
+        }
+}  
+</script>
+
+</head>
+<body> 
+  
+         <form name="signupform"  action="registerservlet.java" method="get" onsubmit="return validate_form()">
+               
+                <input  type="text" name= "name" placeholder="Enter Full Name"  required/><br>
+              
+                <input  type="email" name= "email" placeholder="Enter Email" required autofocus/><br>
+              
+               
+                <input  type="Password" name="password" placeholder="Create Password" required/><br>
+        
+                
+                <input  type="Password" name="cpassword" placeholder="Re-Enter Password" required/><br>
+            
+                <input type="submit" name="submit" value="Register"/><br>
+                <a href="#">Forget your Password ?</a><br>
+                <a href="ulogin.html">Already have an account ?</a>
+            </form>
+        </div>
+
+ </body>
+ 
+
+</html>

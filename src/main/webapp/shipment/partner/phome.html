@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color: #EBF5FB;
+  overflow: auto;
+  margin-bottom: 5px;
+}
+
+.navbar img,a {
+  float: left;
+  padding: 12px;
+  color: black;
+  text-decoration: none;
+  font-size: 17px;
+}
+.navbar img {
+  float: left;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #FEF9E7;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+  .i{
+  	color: black;
+  	float:right;
+  }
+  .button{
+  	padding: 2px 14px;
+  	color: red;
+  }
+
+}
+
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.btn {
+  border-color: #EBF5FB;
+  color: #fff;
+  box-shadow: 0 0 40px 40px #EBF5FB inset, 0 0 0 0 #EBF5FB;
+  transition: all 150ms ease-in-out;
+}
+ .btn:hover {
+    box-shadow: 0 0 10px 0 #EBF5FB inset, 0 0 10px 4px #EBF5FB;
+  }
+
+
+  .dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color:#FEF9E7 ;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+<body>
+<div class="container">
+<div class="navbar">
+  <img src="logo.png" style="height: 20px;width: auto;">
+  <a href="updateorder.html" "><i class="fa fa-fw fa-plus"></i> UpdateOrder</a>
+   <a href="slogin.html" style="float: right;"><i class="fa fa-fw fa-sign-in"></i> Logout</a> 
+</div>
+<img src="C:\Users\heman\eclipse-workspace\CourierManagementSystem\src\main\webapp\images\image9.jpg" style="width: 100%;">
+<div class="centered">
+	<h1>Stay Home</h1>
+ <h4>Stay-Safe</h4>
+	
+</div>
+</div>
+</body>
+</html> 

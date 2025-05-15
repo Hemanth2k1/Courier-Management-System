@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Boooking Page</title>
+<script type="text/javascript">
+function validate_form()
+     {
+       var phoneno = /^\d{10}$/;
+       var code = /^\d{6}$/;
+       var fname= /^[a-zA-Z\s]+$/;
+       var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        var sc=document.signupform.scode.value;
+         var dc=document.signupform.dcodee.value;
+       var mb=document.signupform.mobile.value;
+       var fn=document.signupform.name.value;
+       var email=document.signupform.email.value;
+      
+       if(sc.match(code))
+        {}
+       else
+        {
+        alert("Invalid Pincode!");
+        return false;
+        }
+        if(dc.match(code))
+        {}
+       else
+        {
+        alert("Invalid Pincode!");
+        return false;
+        }
+        if(mb.match(phoneno))
+        {}
+       else
+        {
+        alert("Invalid Number ..!");
+        return false;
+        }
+      
+        if(fn.match(fname))
+        {}
+       else
+        {
+        alert("Invalid  name ..!");
+        return false;
+        }
+        if(mailformat.match(email))
+        {}
+       else
+        {
+        alert("Invalid Email ..!");
+        return false;
+        }
+}  
+</script>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color: #EBF5FB;
+  overflow: auto;
+  margin-bottom: 5px; 
+}
+
+.navbar img,a {
+  float: left;
+  padding: 12px;
+  color: black;
+  text-decoration: none;
+  font-size: 17px;
+}
+.navbar img {
+  float: left;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #FEF9E7;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+  .i{
+    color: black;
+    float:right;
+  }
+  .button{
+    padding: 2px 14px;
+    color: red;
+  }
+
+}
+.container {
+  position: absolute;
+  color: white;
+}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.btn {
+  border-color: #EBF5FB;
+  color: #fff;
+  box-shadow: 0 0 40px 40px #EBF5FB inset, 0 0 0 0 #EBF5FB;
+  transition: all 150ms ease-in-out;
+}
+ .btn:hover {
+    box-shadow: 0 0 10px 0 #EBF5FB inset, 0 0 10px 4px #EBF5FB;
+  }
+
+
+
+        .signupbox {
+            width: 600px;
+            height: 480px;
+            background: white;
+            color: black;
+            top: 20%;
+            left: 10%;
+            position: absolute;
+            transform: translate(-10%, -20%);
+            box-sizing: border-box;
+            padding: 70px 30px
+        }
+        
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 25%;
+            position: absolute;
+            top: -75px;
+            left: 29%
+        }
+        
+        h1 {
+            margin: 0;
+            padding: 0 0 20 px;
+            text-align: center;
+            font-size: 22px;
+        }
+        
+        .signupbox p {
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+        }
+        
+        .signupbox input {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .signupbox input[type="text"],input[type="email"],
+        input[type="password"] {
+            border: none;
+            border-bottom: 1px solid black;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: black;
+            font-size: 18px;
+        }
+        
+        .signupbox input[type="submit"] {
+            border: none;
+            outline: none;
+            height: 40px;
+            background: red;
+            color: white;
+            font-size: 18px;
+            border-radius: 20px;
+        }
+        
+        .signupbox input[type="submit"]:hover {
+            cursor: pointer;
+            background: #ffc107;
+            color: #000;
+        }
+        
+        .signupbox a {
+            text-decoration: none;
+            font-size: 12px;
+            line-height: 20px;
+            color: darkgrey;
+        }
+        
+        .signupbox a:hover {
+            color: #ffc107;
+        }
+   .side{
+       
+        width: 100%;
+        top: 10%;
+        left: 50%;
+
+transform: translate(-10%,-50%);
+
+       }
+</style>
+<body>
+
+<div class="navbar">
+  <img src="logo.png" style="height: 20px;width: auto;">
+  <a href="uregister.html" style="float: right;"><i class="fa fa-fw fa-sign-in"></i> LogOut</a>
+  <a href="contact.html" style="float: right;"><i class="fa fa-fw fa-wrench"></i> Services</a> 
+</div>
+<div class="side"><img src="C:\Users\heman\eclipse-workspace\CourierManagementSystem\src\main\webapp\images\2.jpg" align="right"></div>
+ <div class="signupbox">
+             
+            <h1>Place a Order Request</h1>
+            <form name="signupform" action="booking.jsp" method="get" onsubmit="return validate_form()">
+                <p>Full Name</p>
+                <input type="text" name= "name" placeholder="Enter Full Name"  required/>
+                <p>Email</p>
+                <input type="email" name= "email" placeholder="Enter Email" required autofocus/>
+                <p>Mobile No</p>
+                <input type="text" name= "mobile" placeholder="Enter Mobile Number" required/>
+                <p>Pincode</p>
+                <input type="text" name="scode" placeholder="Source Code" required/>
+                <p>Source</p>
+                <input type="text" name="saddress" placeholder="Source Address" required/>
+                <p>Pincode</p>
+                <input type="text" name="dcode" placeholder="Destination Code" required/>
+                <p>Destination</p>
+                <input type="text" name="daddress" placeholder="Destination Address" required/>
+
+                <input type="submit" name="submit" value="Book"/><br>
+            </form>
+        </div>
+
+
+</body>
+</html> 
